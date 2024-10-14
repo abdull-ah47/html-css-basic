@@ -1,92 +1,162 @@
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+/* General Styles */
 body {
-color: #fff;
-background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
 }
 
-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 50px;
-background: linear-gradient(45deg, #ff5f6d, #ffc371);
-color: white;
-position: fixed;
-top: 0;
-width: 100%;
- z-index: 1000;
+h1, h2 {
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
 }
 
-.logo h1 {
-font-size: 32px;
+p {
+    color: white;
+    text-align: center;
 }
 
-nav ul {
-list-style: none;
-display: flex;
-}
-nav ul li {
-margin-left: 30px;
-}
-nav ul li a {
-color: #fff;
-font-size: 18px;
-font-weight: 500;
-padding: 8px 15px;
-}
-nav ul li a:hover {
-background-color: #ff5f6d;
-border-radius: 5px;
-}
-.project {
-height: 100vh;
-background: url('https://images.squarespace-cdn.com/content/v1/5ca7eb2aa56827a4cf407fd9/1561331365770-I9B1DPPCXK5ERP68H5BX/spyhouse_stpaul_latte_croissant.jpg') no-repeat center center/cover;
-position: relative;
-display: flex;
-justify-content: center;
-align-items: center;
-text-align: center;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-.overlay {
-background-color: rgba(0, 0, 0, 0.6);
-padding: 60px;
-border-radius: 20px;
+/* Header Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(139, 87, 66, 0.9); /* Make the background slightly transparent */
+    padding: 1rem;
 }
 
-
-.overlay h2 {
-font-size: 64px;
-margin-bottom: 20px;
-letter-spacing: 2px;
+.navbar a {
+    margin: 0 15px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
-.overlay p {
-font-size: 24px;
-margin-bottom: 30px;
+.navbar a:hover {
+    background-color: rgba(90, 52, 46, 0.8);
 }
 
-.cta-btn {
-background-color: #ffcc00;
-color: #333;
-padding: 15px 30px;
-font-size: 18px;
-border-radius: 5px;
-}
-.cta-btn:hover {
-background-color: #ff9900;
+/* Center the content and make sure it takes the full height */
+.home-section, .menu-section, .contact-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;  /* Center vertically */
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
 }
 
+/* Home Section Background */
+.home-section {
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231003/pngtree-aesthetic-3d-render-of-coffee-cup-on-a-cafe-table-perfect-image_13545033.png'); /* Path to home background image */
+}
+
+/* Menu Section Background */
+.menu-section {
+    background-image: url('https://plus.unsplash.com/premium_photo-1668472273029-ba03dfaf5c45?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29mZmVlJTIwYWVzdGhldGljfGVufDB8fDB8fHww'); /* Path to menu background image */
+}
+
+/* Contact Section Background */
+.contact-section {
+    background-image: url('https://www.shutterstock.com/image-photo/group-young-intercultural-friends-sitting-600nw-2333689595.jpg'); /* Path to contact background image */
+}
+
+/* Style for the welcome text */
+.welcome h1 {
+    font-size: 4rem;  /* Increase h1 font size */
+    color: white;
+    margin: 0;
+}
+
+.welcome p {
+    font-size: 1.5rem;  /* Increase paragraph font size */
+    color: white;
+    max-width: 80%;  /* Limit paragraph width */
+    margin-top: 20px; /* Add space between h1 and p */
+}
+
+/* Menu Styles */
+.menu-list {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.menu-list li {
+    list-style: none;
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.grid-item input, 
+.grid-item textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.grid-item button {
+    background-color: #8b5742;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.grid-item button:hover {
+    background-color: #5a342e;
+}
+
+/* Footer */
 footer {
-background-color: #333;
-color: white;
-text-align: center;
-padding: 15px;
-position: fixed;
-bottom: 0;
-width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(139, 87, 66, 0.9);
+    color: white;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
+
+
