@@ -17,11 +17,11 @@ header {
     top: 0;
     z-index: 100;
 }
-/* Logo in header */
+
 .logo  {
-    width: 50px;  /* Adjust the width as needed */
-    height: auto;  /* Maintain aspect ratio */
-    max-height: 50px;  /* Optional: limit max height */
+    width: 50px;  
+    height: auto;  
+    max-height: 50px;  
 }
 
 header nav ul {
@@ -38,7 +38,7 @@ header nav ul li a {
     text-decoration: none;
 }
 
-/* Shop Items */
+
 .item {
     display: flex;
     flex-wrap: wrap;
@@ -54,7 +54,7 @@ header nav ul li a {
     border-radius: 8px;
     padding: 1rem;
     text-align: center;
-    width: 30%; /* Three items in a row */
+    width: 30%; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
@@ -93,7 +93,7 @@ header nav ul li a {
 .item button:hover {
     background: #555;
 }
-/* Cart Styles */
+
 #cart-items {
     margin-bottom: 2rem;
 }
@@ -117,7 +117,6 @@ header nav ul li a {
     font-weight: bold;
 }
 
-/* Checkout Form */
 #checkout-form {
     background: #95939305;
     display: flex;
@@ -152,7 +151,7 @@ header nav ul li a {
 }
 
 
-/* Footer */
+
 footer {
     background: #333;
     color: white;
@@ -176,15 +175,14 @@ footer .footer-bottom {
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .item {
-        width: 45%; /* Two items in a row for tablets */
+        width: 45%; 
     }
 }
 
 @media (max-width: 480px) {
     .item {
-        width: 90%; /* Single item in a row for small screens */
+        width: 90%; 
     }
 }
