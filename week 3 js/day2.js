@@ -86,8 +86,3 @@ const house = {
     console.log(`${property}: ${house[property]}`);
   }
   
-  
-
-
-  
-  

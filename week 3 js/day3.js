@@ -3,7 +3,7 @@ const users = [
     { username: "user1", name: "Leanne Graham", zipcode: "92998-3874" },
     { username: "user2", name: "Ervin Howell", zipcode: "90566-7771" },
     { username: "user3", name: "Patricia Lebsack", zipcode: "53919-4257" },
-    // more users...
+    
   ];
   const firstUsername = users[0].username;
   console.log("Username of the first user:", firstUsername);
@@ -58,7 +58,7 @@ if (userToUpdatePhone) {
         { id: 2, username: "user2", name: "Ervin Howell", email: "ervin@example.com", address: { city: "McKenzie" } },
         { id: 3, username: "Bret", name: "Patricia Lebsack", email: "patricia@example.com", address: { city: "South Elvis" } },
         { id: 4, username: "user4", name: "John Doe", email: "john@example.com", address: { city: "Westworld" } },
-      ];
+];
 
 users.forEach(user => {
     console.log(user.name);

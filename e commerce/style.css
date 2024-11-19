@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://img.pikbest.com/ai/illus_our/20230413/408c90f9a74f0948e592e9eb2587af60.jpg!sw800') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #100101ec;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/* Logo in header */
+.logo  {
+    width: 50px;  /* Adjust the width as needed */
+    height: auto;  /* Maintain aspect ratio */
+    max-height: 50px;  /* Optional: limit max height */
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Shop Items */
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+.item {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 30%; /* Three items in a row */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.item button {
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.item button:hover {
+    background: #555;
+}
+/* Cart Styles */
+#cart-items {
+    margin-bottom: 2rem;
+}
+
+.cart-item {
+    background: #aba8a8;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    margin: 1rem 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#total-price {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+#total-price p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Checkout Form */
+#checkout-form {
+    background: #95939305;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#checkout-form label {
+    margin-bottom: 5px;
+}
+
+#checkout-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#checkout-form button {
+    background: #f4efef05;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#checkout-form button:hover {
+    background: #a9a7a7;
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-content .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .footer-bottom {
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .item {
+        width: 45%; /* Two items in a row for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: 90%; /* Single item in a row for small screens */
+    }
+}

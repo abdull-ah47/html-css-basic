@@ -1,0 +1,116 @@
+<!-- asynchronus -->
+
+<!-- set timeout -->
+  <!-- example 1 -->
+setTimeout(() => {
+  console.log("This message is delayed by 2 seconds");
+}, 2000);
+<!-- example2 -->
+for (let i = 1; i <= 5; i++) {
+    setTimeout(() => {
+      console.log(`Message ${i}`);
+    }, i * 1000);
+  }
+  <!-- example3 -->
+  const condition = true;
+
+  if (condition) {
+    setTimeout(() => {
+      console.log("Condition met!");
+    }, 3000);
+  } else {
+    console.log("No delay, condition not met.");
+  }
+  
+<!--example4  -->
+function countdown(num) {
+    if (num > 0) {
+      console.log(num);
+      setTimeout(() => countdown(num - 1), 1000);
+    } else {
+      console.log("Go!");
+    }
+  }
+  
+  countdown(3);
+
+  <!-- setinteval -->
+
+   <!-- example1 -->
+  setInterval(() => {
+    console.log("Hello every 1 second!");
+  }, 1000);
+
+  <!-- example 2 -->
+  setInterval(() => {
+    const now = new Date();
+    console.log("Current time:", now.toLocaleTimeString());
+  }, 1000);
+  
+  <!-- example3 -->
+  let showMessage = true;
+
+  setInterval(() => {
+    if (showMessage) {
+      console.log("Hello!");
+    } else {
+      console.log("Goodbye!");
+    }
+    showMessage = !showMessage;
+  }, 2000);
+
+  <!-- example4 -->
+  let counter = 0;
+
+  const interval = setInterval(() => {
+    console.log("Message", counter + 1);
+    counter++;
+    if (counter === 5) {
+      clearInterval(interval);
+      console.log("Interval stopped.");
+    }
+  }, 1000);
+
+  <!-- call back -->
+
+   <!-- example1 -->
+   function greet(name, callback) {
+    console.log("Hello, " + name);
+    callback();
+  }
+  
+  greet("Alice", () => {
+    console.log("This is a callback function.");
+  });
+ <!-- example2 -->
+ function delayedMessage(callback) {
+    setTimeout(() => {
+      console.log("Message after 2 seconds.");
+      callback();
+    }, 2000);
+  }
+  
+  delayedMessage(() => {
+    console.log("This is the callback after delay.");
+  });
+  <!--example 3-->
+  function calculate(a, b, callback) {
+    const result = a + b;
+    callback(result);
+  }
+  
+  calculate(5, 3, (sum) => {
+    console.log("The sum is:", sum);
+  });
+  <!--example4  -->
+  function fetchData(callback) {
+    setTimeout(() => {
+      const data = { id: 1, name: "Item" };
+      callback(data);
+    }, 1000);
+  }
+  
+  fetchData((data) => {
+    console.log("Fetched data:", data);
+  });
+  

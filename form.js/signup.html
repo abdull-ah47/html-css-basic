@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup</title>
+</head>
+<body>
+<h2>Signup</h2>
+<form onsubmit="signup(event)">
+<input type="text" id="name" placeholder="Name" required><br>
+<input type="email" id="email" placeholder="Email" required><br>
+<input type="password" id="password" placeholder="Password" required><br>
+ <button type="submit">Signup</button>
+</form>
+<script>
+function signup(event) {
+event.preventDefault();
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+const user = { name, email, password };
+localStorage.setItem('user', JSON.stringify(user));
+alert("Signup successful! Redirecting to Signin page.");
+window.location.href = 'signin.html';
+}
+    </script>
+</body>
+</html>
